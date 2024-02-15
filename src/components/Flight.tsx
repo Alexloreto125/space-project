@@ -2,6 +2,7 @@ import { Button, Card, Col } from "react-bootstrap";
 import { ISpace } from "../Interfaces/Interfaces";
 import { IResult } from "../Interfaces/Interfaces";
 import { ILaunch } from "../Interfaces/Interfaces";
+import { Link } from "react-router-dom";
 
 const Flight = ({ flightData }: { flightData: ISpace & IResult & ILaunch }) => {
   return (
@@ -12,7 +13,9 @@ const Flight = ({ flightData }: { flightData: ISpace & IResult & ILaunch }) => {
           <Card.Title>{flightData.title}</Card.Title>
           <Card.Text>{flightData.summary}</Card.Text>
           <Card.Text>{flightData.published_at}</Card.Text>
-          <Button variant="primary">Details</Button>
+          <Link to={`/details/${flightData.id}`}>
+            <Button variant="primary">Details</Button>
+          </Link>
         </Card.Body>
       </Card>
     </Col>

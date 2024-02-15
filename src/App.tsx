@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import FetchFlight from "./components/FetchFlight";
 import Home from "./components/Home";
+import Details from "./components/Details";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<FetchFlight />} />
+        <Route path={`/details/:id`} element={<Details />} />
         <Route
           path="/*"
           element={
