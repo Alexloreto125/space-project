@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ILaunch, IResult, ISpace } from "../Interfaces/Interfaces";
-import { useParams } from "react-router-dom";
-import { Card, Spinner } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
+import { Button, Card, Spinner } from "react-bootstrap";
 
 const Details = () => {
   const [flightDetails, setFlightDetails] = useState<
@@ -33,6 +33,14 @@ const Details = () => {
   return (
     <div>
       <h2>Details Page</h2>
+      <div className="d-flex ">
+        <Link to="/flight" className="me-4">
+          <Button variant="primary"> Return to Flight</Button>
+        </Link>
+        <Link to="/">
+          <Button variant="secondary">Return to Home</Button>
+        </Link>
+      </div>
 
       {flightDetails ? (
         <Card style={{ height: "100%" }}>

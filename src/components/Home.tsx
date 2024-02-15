@@ -1,19 +1,17 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <Container>
-      <Row>
+      <Row className="align-items-center">
         <Col>
           <h1>SpaceFlight</h1>
         </Col>
         <Col>
-          <Link to="/flight">Vai a flight</Link>
-        </Col>
-        <Col>
-          <Link to="/">Vai a Home</Link>
-          {/* <Link to="/details"></Link> */}
+          <Link to="/flight">
+            <Button variant="primary"> Vai a Flight</Button>
+          </Link>
         </Col>
       </Row>
     </Container>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ILaunch, IResult, ISpace } from "../Interfaces/Interfaces";
-import { escape } from "lodash";
-import { Col, Container, Row } from "react-bootstrap";
+
+import { Button, Col, Container, Row } from "react-bootstrap";
 import Flight from "./Flight";
 import { Link } from "react-router-dom";
 
@@ -37,7 +37,9 @@ const FetchFlight = () => {
           <h2>Flight disponibili nel database:</h2>
         </Col>
         <Col xs={12} md={6}>
-          <Link to="/">Return To Home</Link>
+          <Link to="/">
+            <Button variant="secondary">Return to Home</Button>
+          </Link>
         </Col>
       </Row>
       <Row>
